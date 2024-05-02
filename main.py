@@ -46,7 +46,7 @@ def home():
         session["name"] = name
         return redirect(url_for("room"))
 
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/room")
 def room():

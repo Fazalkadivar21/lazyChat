@@ -1,69 +1,76 @@
-.content {
+/* style.css */
+
+body {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
 }
 
-.buttons {
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+}
+
+main {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-}
-
-.join {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.create-btn {
-  width: 100%;
-}
-
-.message-box {
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 10px;
-  background-color: whitesmoke;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  align-items: stretch;
-}
-
-.messages {
-  overflow-y: scroll;
-  flex: 1;
-  width: 100%;
-}
-
-.inputs {
-  padding: 10px;
-  display: flex;
-}
-
-h2 {
+  align-items: center;
+  max-width: 800px; /* Limit the width */
+  margin: 0 auto; /* Center the main tag */
+  padding: 40px; /* Increase padding */
   text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent black background */
+  border-radius: 15px; /* Increase border radius */
+  /* box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.1); Increase shadow */
+  color: #fff; /* White text */
 }
 
-#message {
-  flex: 1;
+/* Responsive styles */
+@media (max-width: 768px) {
+  main {
+      width: 90%; /* Take up 90% of the screen width on small screens */
+      padding: 20px; /* Reduce padding on small screens */
+  }
 }
 
-.text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
+.intro h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #fff; /* White text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
 }
 
-.muted {
-  font-size: 10px;
-  color: darkgray;
+.intro p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  color: #ddd; /* Light grey text */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
 }
+
+.actions .create-btn, .actions .join-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5em;
+  transition: background-color 0.3s ease;
+}
+
+.actions .create-btn:hover, .actions .join-btn:hover {
+  background-color: #0056b3;
+}
+
